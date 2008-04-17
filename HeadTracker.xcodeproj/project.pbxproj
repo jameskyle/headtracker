@@ -1,0 +1,380 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		ED0A15E40D16EDAF00A01CCD /* GetScannerHeadPosition.m in Resources */ = {isa = PBXBuildFile; fileRef = ED0A15BA0D16EAEC00A01CCD /* GetScannerHeadPosition.m */; };
+		ED0A15E50D16EDAF00A01CCD /* head_motion_feedback.m in Resources */ = {isa = PBXBuildFile; fileRef = ED0A15BB0D16EAEC00A01CCD /* head_motion_feedback.m */; };
+		ED0A15E60D16EDAF00A01CCD /* RenderHeadPosition.m in Resources */ = {isa = PBXBuildFile; fileRef = ED0A15BC0D16EAEC00A01CCD /* RenderHeadPosition.m */; };
+		ED20C95F0D16E9990018BCEA /* GuiController.mm in Sources */ = {isa = PBXBuildFile; fileRef = EDC2B1CF0CF244B200B1D9DF /* GuiController.mm */; };
+		EDC2B1B80CF2301000B1D9DF /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EDC2B1AA0CF2301000B1D9DF /* Controller.cpp */; };
+		EDC2B1B90CF2301000B1D9DF /* Dispatcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EDC2B1AC0CF2301000B1D9DF /* Dispatcher.cpp */; };
+		EDC2B1BA0CF2301000B1D9DF /* Fastrak.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EDC2B1AE0CF2301000B1D9DF /* Fastrak.cpp */; };
+		EDC2B1BC0CF2301000B1D9DF /* Fastrak_Log in Resources */ = {isa = PBXBuildFile; fileRef = EDC2B1B10CF2301000B1D9DF /* Fastrak_Log */; };
+		EDC2B1BD0CF2301000B1D9DF /* FASTRAKRevE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EDC2B1B20CF2301000B1D9DF /* FASTRAKRevE.pdf */; };
+		EDC2B1BE0CF2301000B1D9DF /* Notes in Resources */ = {isa = PBXBuildFile; fileRef = EDC2B1B30CF2301000B1D9DF /* Notes */; };
+		EDC2B1BF0CF2301000B1D9DF /* Observer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EDC2B1B40CF2301000B1D9DF /* Observer.cpp */; };
+		EDC2B1C00CF2301000B1D9DF /* safe-read.c in Sources */ = {isa = PBXBuildFile; fileRef = EDC2B1B60CF2301000B1D9DF /* safe-read.c */; };
+		EDEE9C240CF3590F00B5F1B7 /* headtracker.project in Resources */ = {isa = PBXBuildFile; fileRef = EDEE9C230CF3590F00B5F1B7 /* headtracker.project */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32CA4F630368D1EE00C91783 /* HeadTracker_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadTracker_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* HeadTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeadTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED0A15BA0D16EAEC00A01CCD /* GetScannerHeadPosition.m */ = {isa = PBXFileReference; explicitFileType = text; fileEncoding = 4; path = GetScannerHeadPosition.m; sourceTree = "<group>"; };
+		ED0A15BB0D16EAEC00A01CCD /* head_motion_feedback.m */ = {isa = PBXFileReference; explicitFileType = text; fileEncoding = 4; path = head_motion_feedback.m; sourceTree = "<group>"; };
+		ED0A15BC0D16EAEC00A01CCD /* RenderHeadPosition.m */ = {isa = PBXFileReference; explicitFileType = text; fileEncoding = 4; path = RenderHeadPosition.m; sourceTree = "<group>"; };
+		EDC2B1A80CF2301000B1D9DF /* CommonVariables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonVariables.h; sourceTree = "<group>"; };
+		EDC2B1A90CF2301000B1D9DF /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		EDC2B1AA0CF2301000B1D9DF /* Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Controller.cpp; sourceTree = "<group>"; };
+		EDC2B1AB0CF2301000B1D9DF /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
+		EDC2B1AC0CF2301000B1D9DF /* Dispatcher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Dispatcher.cpp; sourceTree = "<group>"; };
+		EDC2B1AD0CF2301000B1D9DF /* Dispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dispatcher.h; sourceTree = "<group>"; };
+		EDC2B1AE0CF2301000B1D9DF /* Fastrak.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Fastrak.cpp; sourceTree = "<group>"; };
+		EDC2B1AF0CF2301000B1D9DF /* Fastrak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fastrak.h; sourceTree = "<group>"; };
+		EDC2B1B10CF2301000B1D9DF /* Fastrak_Log */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Fastrak_Log; sourceTree = "<group>"; };
+		EDC2B1B20CF2301000B1D9DF /* FASTRAKRevE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = FASTRAKRevE.pdf; sourceTree = "<group>"; };
+		EDC2B1B30CF2301000B1D9DF /* Notes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Notes; sourceTree = "<group>"; };
+		EDC2B1B40CF2301000B1D9DF /* Observer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Observer.cpp; sourceTree = "<group>"; };
+		EDC2B1B50CF2301000B1D9DF /* Observer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Observer.h; sourceTree = "<group>"; };
+		EDC2B1B60CF2301000B1D9DF /* safe-read.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "safe-read.c"; sourceTree = "<group>"; };
+		EDC2B1B70CF2301000B1D9DF /* safe-read.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "safe-read.h"; sourceTree = "<group>"; };
+		EDC2B1CE0CF244B200B1D9DF /* GuiController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuiController.h; sourceTree = "<group>"; };
+		EDC2B1CF0CF244B200B1D9DF /* GuiController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GuiController.mm; sourceTree = "<group>"; };
+		EDEE9C230CF3590F00B5F1B7 /* headtracker.project */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = headtracker.project; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EDC2B1C40CF2302D00B1D9DF /* m4 */,
+				EDC2B1C30CF2302600B1D9DF /* Source */,
+				EDC2B1C20CF2301E00B1D9DF /* Headers */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* HeadTracker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* HeadTracker */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = HeadTracker;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* HeadTracker_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ED0A15C00D16EAF900A01CCD /* Matlab Files */,
+				EDEE9C230CF3590F00B5F1B7 /* headtracker.project */,
+				EDC2B1B10CF2301000B1D9DF /* Fastrak_Log */,
+				EDC2B1B20CF2301000B1D9DF /* FASTRAKRevE.pdf */,
+				EDC2B1B30CF2301000B1D9DF /* Notes */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ED0A15C00D16EAF900A01CCD /* Matlab Files */ = {
+			isa = PBXGroup;
+			children = (
+				ED0A15BA0D16EAEC00A01CCD /* GetScannerHeadPosition.m */,
+				ED0A15BB0D16EAEC00A01CCD /* head_motion_feedback.m */,
+				ED0A15BC0D16EAEC00A01CCD /* RenderHeadPosition.m */,
+			);
+			name = "Matlab Files";
+			sourceTree = "<group>";
+		};
+		EDC2B1C20CF2301E00B1D9DF /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				EDC2B1A80CF2301000B1D9DF /* CommonVariables.h */,
+				EDC2B1CE0CF244B200B1D9DF /* GuiController.h */,
+				EDC2B1AB0CF2301000B1D9DF /* Controller.h */,
+				EDC2B1B50CF2301000B1D9DF /* Observer.h */,
+				EDC2B1AD0CF2301000B1D9DF /* Dispatcher.h */,
+				EDC2B1AF0CF2301000B1D9DF /* Fastrak.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		EDC2B1C30CF2302600B1D9DF /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				EDC2B1AA0CF2301000B1D9DF /* Controller.cpp */,
+				EDC2B1CF0CF244B200B1D9DF /* GuiController.mm */,
+				EDC2B1AC0CF2301000B1D9DF /* Dispatcher.cpp */,
+				EDC2B1AE0CF2301000B1D9DF /* Fastrak.cpp */,
+				EDC2B1B40CF2301000B1D9DF /* Observer.cpp */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		EDC2B1C40CF2302D00B1D9DF /* m4 */ = {
+			isa = PBXGroup;
+			children = (
+				EDC2B1A90CF2301000B1D9DF /* config.h */,
+				EDC2B1B60CF2301000B1D9DF /* safe-read.c */,
+				EDC2B1B70CF2301000B1D9DF /* safe-read.h */,
+			);
+			name = m4;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* HeadTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "HeadTracker" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HeadTracker;
+			productInstallPath = "$(HOME)/Applications";
+			productName = HeadTracker;
+			productReference = 8D1107320486CEB800E47090 /* HeadTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = NO;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "HeadTracker" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* HeadTracker */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* HeadTracker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED0A15E40D16EDAF00A01CCD /* GetScannerHeadPosition.m in Resources */,
+				ED0A15E50D16EDAF00A01CCD /* head_motion_feedback.m in Resources */,
+				ED0A15E60D16EDAF00A01CCD /* RenderHeadPosition.m in Resources */,
+				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				EDC2B1BC0CF2301000B1D9DF /* Fastrak_Log in Resources */,
+				EDC2B1BD0CF2301000B1D9DF /* FASTRAKRevE.pdf in Resources */,
+				EDC2B1BE0CF2301000B1D9DF /* Notes in Resources */,
+				EDEE9C240CF3590F00B5F1B7 /* headtracker.project in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				ED20C95F0D16E9990018BCEA /* GuiController.mm in Sources */,
+				EDC2B1B80CF2301000B1D9DF /* Controller.cpp in Sources */,
+				EDC2B1B90CF2301000B1D9DF /* Dispatcher.cpp in Sources */,
+				EDC2B1BA0CF2301000B1D9DF /* Fastrak.cpp in Sources */,
+				EDC2B1BF0CF2301000B1D9DF /* Observer.cpp in Sources */,
+				EDC2B1C00CF2301000B1D9DF /* safe-read.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		29B97318FDCFA39411CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29B97319FDCFA39411CA2CEA /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = HeadTracker_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = HeadTracker;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = HeadTracker_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = HeadTracker;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "HeadTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "HeadTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

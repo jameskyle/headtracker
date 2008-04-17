@@ -1,0 +1,21 @@
+HeadTracker="/Users/jkyle/Projects/Fastrak/HeadTracker" flags="l"{
+ Fastrak_Log
+ Notes
+CPP="." filter="*.cpp" {
+  Controller.cpp
+  Dispatcher.cpp
+  Fastrak.cpp
+  FastrakException.cpp
+  Observer.cpp
+  main.cpp
+  matrak.cpp
+}
+Headers="." filter="*.h" {
+  CommonVariables.h
+  Controller.h
+  Dispatcher.h
+  Fastrak.h
+  FastrakException.h
+  Observer.h
+}
+}

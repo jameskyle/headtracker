@@ -1,0 +1,4 @@
+The edge-triggered polling system 
+-) for *bsd is kqueue (and kevent)
+-) for linux is epoll()
+-) Windows is EventManager(?)
