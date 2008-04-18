@@ -54,26 +54,8 @@ prompt_text = 'Dummy Stimulus';
 [prompt_size, prompt_offset_size] = Screen('TextBounds',w,prompt_text);
 prompt_shift = prompt_offset_size(3)/2;
 
-
-
-%oldTextSize=Screen('TextSize', w, 40);
-%Screen('DrawText',w,'press any key to begin',xcenter-375,ycenter-320);
-%Screen('TextSize', w, oldTextSize);
-
-%Screen('Flip',w);
-
-%KbWait;  % wait for keypress
-
-% clear screen
-%Screen('Flip', w);
-
-
-%Screen('DrawText', w, prompt_text, xcenter - prompt_shift, ycenter);
-%Screen('Flip', w);
-%pause(3);
 fid = fopen('/tmp/Controller.log', 'r');
 RenderHeadPosition(w,aspect_ratio,xcenter,ycenter/2,30,stimulusRestTime,fid);
-
 % look for a keypress
 [keyIsDown,secs,keyCode]=KbCheck;
 if keyIsDown,

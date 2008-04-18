@@ -114,7 +114,7 @@ function RenderHeadPosition(ptr,aspect_ratio,x_center,y_center,scale_factor, dur
   % to all objects to be drawn) and then redraws it at its new orientation:
 
   % Clear out backbuffer and depth buffer:
-  start = GetSecs()
+  start = GetSecs();
   % rotate pitch 90 degrees to approximate subject head position while supine
   % glRotatef(90, 1,0,0);
   glClear;
@@ -140,12 +140,13 @@ function RenderHeadPosition(ptr,aspect_ratio,x_center,y_center,scale_factor, dur
   % Ready for next draw loop iteration...
 
   while ~KbCheck 
-    [coords] = GetScannerHeadPosition(fid);
-    
+    [coords] = GetScannerHeadPosition(fid,coords);
     glPushMatrix;
     glClear;
     
     % animates positional change along the x,y,z axis
+    disp('here');
+    disp(coords);
     glTranslatef(-coords.x,-coords.y,0);
      % Increment rotation angle around new z-Axis (0,0,1)  by 0.1 degrees:
     glRotatef(-coords.pitch, 1,0,0);

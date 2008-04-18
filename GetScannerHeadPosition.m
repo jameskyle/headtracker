@@ -12,24 +12,26 @@
 %                  positional variables.
 %                  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% Variable Description %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-function [coords] = GetScannerHeadPosition(fid)
-  
-  [fail] = fseek(fid, 0, 'bof');
-  if fail == -1
-    coords.new_coords = false;
-  else
-    s = fgetl(fid);
-    
-    if ischar(s)
-      [result] = sscanf(s,'%d\t\t%f\t\t%f\t\t%f\t\t%f\t\t%f\t\t%f');
+function [coords] = GetScannerHeadPosition(fid,coords)
+  if fid ~= -1
+    [fail] = fseek(fid, 0, 'bof');
+    if fail == -1
+      coords.new_coords = false;
+    else
+      s = fgetl(fid);
+      
+      if ischar(s)
+        [result] = sscanf(s,'%d\t\t%f\t\t%f\t\t%f\t\t%f\t\t%f\t\t%f');
 
-      coords.x      = result(2);
-      coords.y      = result(3);
-      coords.z      = result(4);
-      coords.yaw 	  = result(5);
-      coords.pitch  = result(6);
-      coords.roll 	= result(7);
-    end
+        coords.x      = result(2);
+        coords.y      = result(3);
+        coords.z      = result(4);
+        coords.yaw 	  = result(5);
+        coords.pitch  = result(6);
+        coords.roll 	= result(7);
+      end
+    end;
+  else
+    coords.new_coords = false;
   end;
-disp(coords)
 return
