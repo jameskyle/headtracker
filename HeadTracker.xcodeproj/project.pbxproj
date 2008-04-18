@@ -14,10 +14,10 @@
 		ED0A15E40D16EDAF00A01CCD /* GetScannerHeadPosition.m in Resources */ = {isa = PBXBuildFile; fileRef = ED0A15BA0D16EAEC00A01CCD /* GetScannerHeadPosition.m */; };
 		ED0A15E50D16EDAF00A01CCD /* head_motion_feedback.m in Resources */ = {isa = PBXBuildFile; fileRef = ED0A15BB0D16EAEC00A01CCD /* head_motion_feedback.m */; };
 		ED0A15E60D16EDAF00A01CCD /* RenderHeadPosition.m in Resources */ = {isa = PBXBuildFile; fileRef = ED0A15BC0D16EAEC00A01CCD /* RenderHeadPosition.m */; };
+		ED1F056A0DB90F1500C0CF2B /* Fastrak.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED1F05690DB90F1500C0CF2B /* Fastrak.cpp */; };
 		ED20C95F0D16E9990018BCEA /* GuiController.mm in Sources */ = {isa = PBXBuildFile; fileRef = EDC2B1CF0CF244B200B1D9DF /* GuiController.mm */; };
 		EDC2B1B80CF2301000B1D9DF /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EDC2B1AA0CF2301000B1D9DF /* Controller.cpp */; };
 		EDC2B1B90CF2301000B1D9DF /* Dispatcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EDC2B1AC0CF2301000B1D9DF /* Dispatcher.cpp */; };
-		EDC2B1BA0CF2301000B1D9DF /* Fastrak.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EDC2B1AE0CF2301000B1D9DF /* Fastrak.cpp */; };
 		EDC2B1BC0CF2301000B1D9DF /* Fastrak_Log in Resources */ = {isa = PBXBuildFile; fileRef = EDC2B1B10CF2301000B1D9DF /* Fastrak_Log */; };
 		EDC2B1BD0CF2301000B1D9DF /* FASTRAKRevE.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EDC2B1B20CF2301000B1D9DF /* FASTRAKRevE.pdf */; };
 		EDC2B1BE0CF2301000B1D9DF /* Notes in Resources */ = {isa = PBXBuildFile; fileRef = EDC2B1B30CF2301000B1D9DF /* Notes */; };
@@ -40,13 +40,13 @@
 		ED0A15BA0D16EAEC00A01CCD /* GetScannerHeadPosition.m */ = {isa = PBXFileReference; explicitFileType = text; fileEncoding = 4; path = GetScannerHeadPosition.m; sourceTree = "<group>"; };
 		ED0A15BB0D16EAEC00A01CCD /* head_motion_feedback.m */ = {isa = PBXFileReference; explicitFileType = text; fileEncoding = 4; path = head_motion_feedback.m; sourceTree = "<group>"; };
 		ED0A15BC0D16EAEC00A01CCD /* RenderHeadPosition.m */ = {isa = PBXFileReference; explicitFileType = text; fileEncoding = 4; path = RenderHeadPosition.m; sourceTree = "<group>"; };
+		ED1F05690DB90F1500C0CF2B /* Fastrak.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Fastrak.cpp; sourceTree = "<group>"; };
 		EDC2B1A80CF2301000B1D9DF /* CommonVariables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonVariables.h; sourceTree = "<group>"; };
 		EDC2B1A90CF2301000B1D9DF /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		EDC2B1AA0CF2301000B1D9DF /* Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Controller.cpp; sourceTree = "<group>"; };
 		EDC2B1AB0CF2301000B1D9DF /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
 		EDC2B1AC0CF2301000B1D9DF /* Dispatcher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Dispatcher.cpp; sourceTree = "<group>"; };
 		EDC2B1AD0CF2301000B1D9DF /* Dispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dispatcher.h; sourceTree = "<group>"; };
-		EDC2B1AE0CF2301000B1D9DF /* Fastrak.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Fastrak.cpp; sourceTree = "<group>"; };
 		EDC2B1AF0CF2301000B1D9DF /* Fastrak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fastrak.h; sourceTree = "<group>"; };
 		EDC2B1B10CF2301000B1D9DF /* Fastrak_Log */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Fastrak_Log; sourceTree = "<group>"; };
 		EDC2B1B20CF2301000B1D9DF /* FASTRAKRevE.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = FASTRAKRevE.pdf; sourceTree = "<group>"; };
@@ -182,8 +182,8 @@
 				EDC2B1AA0CF2301000B1D9DF /* Controller.cpp */,
 				EDC2B1CF0CF244B200B1D9DF /* GuiController.mm */,
 				EDC2B1AC0CF2301000B1D9DF /* Dispatcher.cpp */,
-				EDC2B1AE0CF2301000B1D9DF /* Fastrak.cpp */,
 				EDC2B1B40CF2301000B1D9DF /* Observer.cpp */,
+				ED1F05690DB90F1500C0CF2B /* Fastrak.cpp */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -267,9 +267,9 @@
 				ED20C95F0D16E9990018BCEA /* GuiController.mm in Sources */,
 				EDC2B1B80CF2301000B1D9DF /* Controller.cpp in Sources */,
 				EDC2B1B90CF2301000B1D9DF /* Dispatcher.cpp in Sources */,
-				EDC2B1BA0CF2301000B1D9DF /* Fastrak.cpp in Sources */,
 				EDC2B1BF0CF2301000B1D9DF /* Observer.cpp in Sources */,
 				EDC2B1C00CF2301000B1D9DF /* safe-read.c in Sources */,
+				ED1F056A0DB90F1500C0CF2B /* Fastrak.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

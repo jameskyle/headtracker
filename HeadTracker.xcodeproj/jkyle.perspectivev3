@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>ActivePerspectiveName</key>
-	<string>Debug</string>
+	<string>Project</string>
 	<key>AllowedModules</key>
 	<array>
 		<dict>
@@ -282,6 +282,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -328,6 +330,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
+									<integer>3</integer>
+									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -348,6 +352,8 @@
 							<string>MainColumn</string>
 							<real>307</real>
 						</array>
+						<key>RubberWindowFrame</key>
+						<string>394 78 1236 867 0 0 1680 1028 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -363,7 +369,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>EDC2B1D20CF244C800B1D9DF</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Fastrak.cpp</string>
+								<string></string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -371,11 +377,7 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>EDC2B1D30CF244C800B1D9DF</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>Fastrak.cpp</string>
-										<key>_historyCapacity</key>
-										<integer>0</integer>
-										<key>bookmark</key>
-										<string>ED76324B0D6CA97400CF65FA</string>
+										<string></string>
 										<key>history</key>
 										<array>
 											<string>EDC2B1D50CF244C800B1D9DF</string>
@@ -392,7 +394,6 @@
 											<string>ED0A15C80D16EB2800A01CCD</string>
 											<string>ED0A15CA0D16EB2800A01CCD</string>
 											<string>ED3FB9020D18936E00B18666</string>
-											<string>EDCDB2E60D4674EF00735DB6</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -401,7 +402,6 @@
 											<string>EDC2B1DA0CF244C800B1D9DF</string>
 											<string>EDC2B1DB0CF244C800B1D9DF</string>
 											<string>ED7ED7880CF4C95D002D540D</string>
-											<string>ED7ED7AE0CF4EFD1002D540D</string>
 											<string>ED8889520CFE03F600C1AD5D</string>
 											<string>ED8889630CFE0AFF00C1AD5D</string>
 											<string>ED88897F0CFE18E100C1AD5D</string>
@@ -425,6 +425,8 @@
 							<dict>
 								<key>Frame</key>
 								<string>{{0, 0}, {907, 602}}</string>
+								<key>RubberWindowFrame</key>
+								<string>394 78 1236 867 0 0 1680 1028 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -448,6 +450,8 @@
 									<dict>
 										<key>Frame</key>
 										<string>{{10, 27}, {907, 192}}</string>
+										<key>RubberWindowFrame</key>
+										<string>394 78 1236 867 0 0 1680 1028 </string>
 									</dict>
 									<key>Module</key>
 									<string>XCDetailModule</string>
@@ -550,11 +554,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>ED76322D0D6CA90300CF65FA</string>
+				<string>ED4F517D0DB910D900A8D2C0</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>ED76322E0D6CA90300CF65FA</string>
+				<string>ED4F517E0DB910D900A8D2C0</string>
 				<string>EDC2B1D20CF244C800B1D9DF</string>
-				<string>ED76322F0D6CA90300CF65FA</string>
+				<string>ED4F517F0DB910D900A8D2C0</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -591,8 +595,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXProjectModuleGUID</key>
@@ -604,8 +606,6 @@
 					<dict>
 						<key>Frame</key>
 						<string>{{0, 0}, {1236, 574}}</string>
-						<key>RubberWindowFrame</key>
-						<string>-1241 77 1236 867 -1280 0 1280 1024 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXDebugCLIModule</string>
@@ -680,11 +680,7 @@
 							</array>
 							<key>Frame</key>
 							<string>{{603, 0}, {633, 120}}</string>
-							<key>RubberWindowFrame</key>
-							<string>-1241 77 1236 867 -1280 0 1280 1024 </string>
 						</dict>
-						<key>RubberWindowFrame</key>
-						<string>-1241 77 1236 867 -1280 0 1280 1024 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXDebugSessionModule</string>
@@ -707,14 +703,14 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>ED7632300D6CA90300CF65FA</string>
+				<string>ED1F055A0DB90EBC00C0CF2B</string>
 				<string>1CCC7628064C1048000F2A68</string>
 				<string>1CCC7629064C1048000F2A68</string>
-				<string>ED7632310D6CA90300CF65FA</string>
-				<string>ED7632320D6CA90300CF65FA</string>
-				<string>ED7632330D6CA90300CF65FA</string>
-				<string>ED7632340D6CA90300CF65FA</string>
-				<string>ED7632350D6CA90300CF65FA</string>
+				<string>ED1F055B0DB90EBC00C0CF2B</string>
+				<string>ED1F055C0DB90EBC00C0CF2B</string>
+				<string>ED1F055D0DB90EBC00C0CF2B</string>
+				<string>ED1F055E0DB90EBC00C0CF2B</string>
+				<string>ED1F05530DB90EB400C0CF2B</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -729,7 +725,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>225225076.52728701</real>
+	<real>230232281.45591399</real>
 	<key>ToolbarDisplayMode</key>
 	<integer>1</integer>
 	<key>ToolbarIsVisible</key>
@@ -744,10 +740,10 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>/Users/jkyle/Projects/Fastrak/HeadTracker/HeadTracker.xcodeproj</string>
+		<string>/Users/jkyle/Projects/HeadTracker/HeadTracker.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>-1241 77 1236 867 -1280 0 1280 1024 </string>
+	<string>394 78 1236 867 0 0 1680 1028 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
