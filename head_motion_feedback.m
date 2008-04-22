@@ -55,7 +55,8 @@ prompt_text = 'Dummy Stimulus';
 prompt_shift = prompt_offset_size(3)/2;
 
 fid = fopen('/tmp/Controller.log', 'r');
-RenderHeadPosition(w,aspect_ratio,xcenter,ycenter/2,30,stimulusRestTime,fid);
+%RenderHeadPosition(w,aspect_ratio,xcenter,ycenter/2,30,stimulusRestTime,fid);
+newRenderHeadPosition(w,aspect_ratio,xcenter,ycenter/2,30,stimulusRestTime,fid);
 % look for a keypress
 [keyIsDown,secs,keyCode]=KbCheck;
 if keyIsDown,

@@ -13,6 +13,13 @@
 %                  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% Variable Description %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 function [coords] = GetScannerHeadPosition(fid,coords)
+  coords.x      = 0;
+  coords.y      = 0;
+  coords.z      = 0;
+  coords.yaw 	  = 0;
+  coords.pitch  = 45;
+  coords.roll 	= 0;
+  coords.new_coords = true;
   if fid ~= -1
     [fail] = fseek(fid, 0, 'bof');
     if fail == -1
@@ -29,6 +36,7 @@ function [coords] = GetScannerHeadPosition(fid,coords)
         coords.yaw 	  = result(5);
         coords.pitch  = result(6);
         coords.roll 	= result(7);
+        coords.new_coords = true;
       end
     end;
   else
