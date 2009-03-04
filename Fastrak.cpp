@@ -18,8 +18,11 @@ Fastrak::Fastrak() {
 void Fastrak::start(){
 	this->monitor = true;
   if(this->getWatchState() == "FASTRAKLOG") { 
-		pthread_create(&monitor_thread, NULL, Fastrak::monitorCallback, this);
-	}
+		pthread_create(&monitor_thread, 
+                   NULL, 
+                   Fastrak::monitorCallback, 
+                   this);
+	} /* Checks for additional watch states, e.g. usb or serial, would go here */
   else {
 	cerr << "No watch state set!" << endl;
 	}
@@ -35,7 +38,7 @@ void Fastrak::setupDefaults() {
 	
 	/****************************************************************************
 	 * FASTRAKLOG: coordinates are parsed from a Fastrak log file               *
-	 * [to be implemented]                                                      *
+	 * [below is to be implemented]                                             *
 	 * FASTRAKUSB: coordinates are received directly from a USB connection      *
 	 * SCANNER:    coordinates are received directly from the MRI Scanner       *   
 	 ****************************************************************************/
@@ -73,7 +76,9 @@ const string Fastrak::getWatchState() const{
 }
 
 bool Fastrak::isValidWatchState(string watch_state) {
-	bool ret = binary_search(this->valid_watch_states.begin(), this->valid_watch_states.end(),watch_state);
+	bool ret = binary_search(this->valid_watch_states.begin(), 
+                           this->valid_watch_states.end(),
+                           watch_state);
 	return ret;
 }
 
@@ -95,7 +100,9 @@ const string Fastrak::getInputType() const {
 }
 
 bool Fastrak::isValidInputType(string input_type) {
-	bool ret = binary_search(this->valid_input_types.begin(), this->valid_input_types.end(), input_type);
+	bool ret = binary_search(this->valid_input_types.begin(), 
+                           this->valid_input_types.end(), 
+                           input_type);
 	return ret;
 }
 
@@ -248,39 +255,71 @@ void Fastrak::resetCoords() {
 
 const Coordinates* Fastrak::getCoordinates() const { return &coords; }
 void* Fastrak::monitorCallback(void* object) {
+  // This function is called from the main Fastrak thread. Currently, all it
+  // does is call the fileMonitor method, other methods could go here as well as
+  // checks of this->watch_state to determine which monitor method to spawn.
 	((Fastrak *)object)->fileMonitor(object);
 	return NULL;
 }
+/*******************************************************************************
+ * The fileMonitor method uses kqueue to watch a file for changes/updates. When
+ * they occur, it updates the Fastrak's current positional attributes
+ * accordingly
+ ******************************************************************************/
 void Fastrak::fileMonitor(void* object) {
+  // cast the object pointer to a fastrak pointer. This is necessary due to the
+  // loss of the "this" pointer with pthread and callbacks.
   Fastrak* pthis = static_cast<Fastrak *>(object);
+  // Instantiate the needed file descripters and kevent structs
   int fd, kq, nev;
   struct kevent event;
   struct kevent change;
-
+  
+  // Create kqueue() object
   kq = kqueue();
   if(kq == -1)  perror("kqueue"); 
+  
+  // Open the fastrak log file
   fd = open(pthis->file_path.c_str(), O_RDONLY);
   if(fd == -1) perror("open");
-
+  
+  // Jump to the end of the file, we're only concerned with the most current
+  // coordinates
   lseek(fd, 0, SEEK_END);
-    
-  EV_SET(&change, fd, EVFILT_VNODE, EV_ADD | EV_ENABLE | 
-         EV_ONESHOT, NOTE_WRITE | NOTE_EXTEND,0,0);
-
+   
+  // Set the watch states. See kqueue(2) for details
+  // EVFILT_VNODE: monitor file
+  // EV_ADD:       add event to kqueue
+  // EV_ENABLE:    return even if triggered
+  // EV_ONESHOT:   only return first occurance
+  // NOTE_WRITE:   notify on write event
+  // NOTE_EXTEND:  notify on append event
+  // 0, 0:         no filter specific data, no user-defined pass throughs
+  EV_SET(&change, fd, 
+         EVFILT_VNODE, 
+         EV_ADD | EV_ENABLE | EV_ONESHOT, 
+         NOTE_WRITE | NOTE_EXTEND,
+         0, 0);
+  
+  // Continue to monitor until the Fastrak object toggles the monitor state to
+  // false
   while(pthis->monitor) {
+    // get any new events
     nev = kevent(kq,&change, 1, &event, 1, NULL);
     if(nev == -1) {
 			perror("kevent");
 		}
-
     else if(nev > 0) {
+      // If a write or extend event has occurred, we update our coordinates
+      // struct with the most recent positional values from the log
       if(event.fflags & NOTE_WRITE || event.fflags & NOTE_EXTEND) {
+        
         pthis->updateCoordinates(&fd);   
         pthis->notify();
       }
     }
   }
-
+  // Clean up
   close(kq);
   close(fd);
 }

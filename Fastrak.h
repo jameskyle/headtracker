@@ -8,9 +8,10 @@
  *  ==Begin Function Reference==
  *  ~Fastrak(): default destructor for the fastrak class
  *    
- *    PreCondition: fastrak object exists
+ *    PreCondition:  fastrak object exists
  *    PostCondition: fastrak object has been released
- *  Fastrak(): default constructor for fastrak object
+ *  
+ *  Fastrak():     default constructor for fastrak object
  *
  *    PreCondition: none
  *    PostCondition: coordinates struct initialized to zero for all variables
@@ -18,7 +19,7 @@
  *                   Fastrak watch_state set to FASTRAKLOG
  *
  *  Fastrak(const string): fastrak object constructor with explicit fastrak log
- *    log file path as argument
+ *                         log file path as argument
  *    
  *    PreCondition: none
  *    PostCondition: coordinates struct initialized to zero for all variables
@@ -26,8 +27,8 @@
  *                   Fastrak watch_state set to FASTRAKLOG
 
  *  void setFastrakLog(const string);
- *      Precondition: string pointer containing the POSIX path to 
- *                       the Fastrak Log.
+ *      Precondition:  string pointer containing the POSIX path to 
+ *                     the Fastrak Log.
  *      Postcondition: file_path contains the given POSIX path 
  *
  *  string* getFastrakLog();
